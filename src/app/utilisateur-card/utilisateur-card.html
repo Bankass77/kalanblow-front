@@ -1,0 +1,20 @@
+<div>
+<img [src]="utilisateur.logo" [alt]="utilisateur.nom" width="48" height="48">
+<h3> {{utilisateur.nom}}  {{utilisateur.prenom}} {{utilisateur.email}} {{utilisateur.adress.numero}} {{utilisateur.adress.rue}}
+    {{utilisateur.adress.zipCode}} {{utilisateur.adress.country}}
+</h3>
+
+@if (utilisateur.profil) {
+    <span> Profil: {{utilisateur.profil.name}}</span>
+}
+
+@if (utilisateur.actif) {
+    <span> Actif</span>
+} @else {
+    <span> Inactif</span>
+}
+
+
+<button (click)="onUpdate()">Modifier</button>
+<button (click)="onSupprimer()">Supprimer</button>
+</div>

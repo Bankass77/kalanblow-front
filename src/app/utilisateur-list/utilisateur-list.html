@@ -1,0 +1,16 @@
+
+<!-- @for (u of utilisateurs; track u.id) {
+    <app-utilisateur-card [utilisateur]="u"/>
+} @empty {
+    <p>Aucun utilisateur</p>
+} -->
+
+
+@if (utilisateurs$ | async; as utilisateurs) {
+    @for (u of utilisateurs; track u.id) {
+        <app-utilisateur-card [utilisateur]="u"
+        (suppression)="onSuppression($event)"/>
+    }
+} @else {
+    <p>Aucun utilisateur</p>
+}

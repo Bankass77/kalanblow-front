@@ -1,0 +1,83 @@
+<div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label>Nom:
+            <input formControlName="nom">
+            @if (form.get('nom')?.invalid && form.get('nom')?.touched) {
+            <span class="erreur"> Le nom est requis(2 caractères min.)</span>
+            }
+        </label>
+        <label>
+            Prénom:
+            <input formControlName="prenom">
+            @if (form.get('prenom')?.invalid && form.get('prenom')?.touched) {
+            <span class="erreur"> Le prénom est requis (2 caractères min.)</span>
+            }
+        </label>
+        <label>Email:
+            <input formControlName="email">
+            @if (form.get('email')?.invalid && form.get('email')?.touched) {
+            <span class="erreur">L'email est est requis, ou invalide</span>
+            }
+        </label>
+        <label>NUMERO INE:
+            <input formControlName="numeroIne">
+            @if (form.get('numeroIne')?.invalid && form.get('numeroIne')?.touched) {
+            <span class="erreur">Le numero INE est requis </span>
+            }
+        </label>
+        <label>LOGO(URL):
+            <input formControlName="logo">
+
+        </label>
+        <label>
+            <input formControlName="actif" type="checkbox">
+            Actif
+        </label>
+        <fieldset formGroupName="adress">
+            <legend> Adresse</legend>
+            <label> Numero de Rue:
+                <input formControlName="numero" type="number">
+                @if (form.get('adress.numero')?.invalid && form.get('adress.numero')?.touched) {
+                <span class="erreur">Le numero de la rue est requis</span>
+                }
+            </label>
+            <label>Rue:
+                <input formControlName="rue">
+                @if (form.get('adress.rue')?.invalid && form.get('adress.rue')?.touched) {
+
+                <span class="erreur"> Le nom de la rue est requis.</span>
+                }
+
+            </label>
+            <label>
+                Code Postale:
+
+                <input formControlName="zipCode">
+                @if (form.get('adress.zipCode')?.invalid && form.get('adress.zipCode')?.touched) {
+
+                <span class="erreur"> Le code postale est requis.</span>
+                }
+            </label>
+            <label> Ville:
+                <input formControlName="ville">
+                @if (form.get('adress.ville')?.invalid && form.get('adress.ville')?.touched) {
+
+                    <span class="erreur">Le nom de la ville est requis.</span>
+                }
+
+            </label>
+            <label> Pays:
+
+                <input formControlName="country">
+                @if (form.get('adress.country')?.invalid && form.get('adress.country')?.touched) {
+
+                <span class="erreur"> Le pays est requis.</span>
+                }
+            </label>
+
+        </fieldset>
+        <button type="submit">{{utilisateurId ? `Modifier`: `Créer`}}</button>
+        
+    </form>
+</div>

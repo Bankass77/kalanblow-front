@@ -1,0 +1,87 @@
+{
+  "utilisateurs": [
+    {
+      "id": "1",
+      "nom": "Diallo",
+      "prenom": "Aissata",
+      "email": "aissata.diallo@example.com",
+      "numeroIne": "IN001234567",
+      "adress": {
+        "numero": 12,
+        "rue": "Rue de la Paix",
+        "Ville": "Paris",
+        "zipCode": 75002,
+        "country": "France"
+      },
+      "actif": true,
+      "profil": {
+        "id": 1,
+        "name": "Administrateur",
+        "uid": "ADMINISTRATEUR",
+        "parentRoleId": null
+      },
+      "logo": "https://i.pravatar.cc/80?img=1"
+    },
+    {
+      "id": "2",
+      "nom": "Traoré",
+      "prenom": "Moussa",
+      "email": "moussa.traore@example.com",
+      "numeroIne": "IN002345678",
+      "adress": {
+        "numero": 5,
+        "rue": "Avenue Foch",
+        "ville": "Antony",
+        "zipCode": 92100,
+        "country": "France"
+      },
+      "actif": false,
+      "profil": {
+        "id": 2,
+        "name": "Utilisateur",
+        "uid": "USER",
+        "parentRoleId": null
+      },
+      "logo": "https://i.pravatar.cc/80?img=2"
+    },
+    {
+      "id": "3",
+      "nom": "Keita",
+      "prenom": "Fatou",
+      "email": "fatou.keita@example.com",
+      "numeroIne": "IN003456789",
+      "adress": {
+        "numero": 8,
+        "rue": "Rue Victor Hugo",
+        "ville": "Lyon",
+        "zipCode": 69002,
+        "country": "France"
+      },
+      "actif": true,
+      "profil": {
+        "id": 2,
+        "name": "Utilisateur",
+        "uid": "USER",
+        "parentRoleId": null
+      },
+      "logo": "https://i.pravatar.cc/80?img=3"
+    },
+    {
+      "nom": "Guindo",
+      "prenom": "Amadou",
+      "numeroIne": "1234567890AZERTY",
+      "email": "amadou.guindo@gmail.com",
+      "actif": true,
+      "logo": "",
+      "adress": {
+        "numero": 45,
+        "rue": "Tiéba Traoré",
+        "ville": "Sikasso",
+        "zipCode": "98000",
+        "country": "Mali"
+      },
+      "id": "bEEUvMtW94s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
